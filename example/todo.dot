@@ -1,0 +1,34 @@
+digraph ws {
+    nodesep = .5;
+    //rankdir = LR;    //指定绘图的方向 (LR从左到右绘制)
+
+    node[shape=record, width=.1, height=.1];
+    //site domain
+    node[color="#550000"];
+    site[label="{cmspSite domain
+    | http://tmpro.cmsp.faw-vw.com 
+    | http://tmpro.cmsp.timanetwork.cn}
+    "];
+
+	//logs
+	logs[label="{logFile|cmsppro.access.log|cmsppro.error.log}"]
+
+
+    //locations
+    node[color="#008800"];
+    uri1[label="{user|vehicle}"];
+    uri2[label="{appserer|commdata}"];
+    uri3[label="{pushrouter|commpush}"];
+    
+    //Upstreams
+    node[color="#000088"];
+    spBase[label="{spBase|192.168.1.100:8080|192.168.1.101:8080}"]
+    spData[label="{spData|192.168.1.102:8080|192.168.1.103:8080}"]
+    spPush[label="{spPush|192.168.1.104:8080|192.168.1.105:8080}"]
+
+    //links
+    site -> {logs,uri1,uri2,uri3};
+    uri1 -> spBase;
+    uri2 -> spData;
+    uri3 -> spPush;
+}

@@ -1,0 +1,205 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+BlockContext	parser/src/NginxParser.java	/^		public BlockContext(ParserRuleContext parent, int invokingState) {$/;"	m	class:NginxParser.BlockContext
+BlockContext	parser/src/NginxParser.java	/^	public static class BlockContext extends ParserRuleContext {$/;"	c	class:NginxParser
+COMMENT	parser/src/NginxLexer.java	/^		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, WS=9, COMMENT=10;$/;"	f	class:NginxLexer
+COMMENT	parser/src/NginxParser.java	/^		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, WS=9, COMMENT=10;$/;"	f	class:NginxParser
+ContextDirectiveContext	parser/src/NginxParser.java	/^		public ContextDirectiveContext(ParserRuleContext parent, int invokingState) {$/;"	m	class:NginxParser.ContextDirectiveContext
+ContextDirectiveContext	parser/src/NginxParser.java	/^	public static class ContextDirectiveContext extends ParserRuleContext {$/;"	c	class:NginxParser
+ID	parser/src/NginxLexer.java	/^		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, WS=9, COMMENT=10;$/;"	f	class:NginxLexer
+ID	parser/src/NginxParser.java	/^		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, WS=9, COMMENT=10;$/;"	f	class:NginxParser
+ID	parser/src/NginxParser.java	/^		public TerminalNode ID() { return getToken(NginxParser.ID, 0); }$/;"	m	class:NginxParser.UpstreamDirectiveContext
+ID	parser/src/NginxParser.java	/^		public TerminalNode ID() { return getToken(NginxParser.ID, 0); }$/;"	m	class:NginxParser.ValueContext
+IncludeDirectiveContext	parser/src/NginxParser.java	/^		public IncludeDirectiveContext(ParserRuleContext parent, int invokingState) {$/;"	m	class:NginxParser.IncludeDirectiveContext
+IncludeDirectiveContext	parser/src/NginxParser.java	/^	public static class IncludeDirectiveContext extends ParserRuleContext {$/;"	c	class:NginxParser
+IncludeListener	src/IncludeListener.java	/^	public IncludeListener(String dir) {$/;"	m	class:IncludeListener
+IncludeListener	src/IncludeListener.java	/^class IncludeListener extends NginxBaseListener {$/;"	c
+NginxBaseListener	parser/src/NginxBaseListener.java	/^public class NginxBaseListener implements NginxListener {$/;"	c
+NginxContext	parser/src/NginxParser.java	/^		public NginxContext(ParserRuleContext parent, int invokingState) {$/;"	m	class:NginxParser.NginxContext
+NginxContext	parser/src/NginxParser.java	/^	public static class NginxContext extends ParserRuleContext {$/;"	c	class:NginxParser
+NginxLexer	parser/src/NginxLexer.java	/^	public NginxLexer(CharStream input) {$/;"	m	class:NginxLexer
+NginxLexer	parser/src/NginxLexer.java	/^public class NginxLexer extends Lexer {$/;"	c
+NginxListener	parser/src/NginxListener.java	/^public interface NginxListener extends ParseTreeListener {$/;"	i
+NginxParser	parser/src/NginxParser.java	/^	public NginxParser(TokenStream input) {$/;"	m	class:NginxParser
+NginxParser	parser/src/NginxParser.java	/^public class NginxParser extends Parser {$/;"	c
+NginxTopo	src/NginxTopo.java	/^public class NginxTopo {$/;"	c
+RULE_block	parser/src/NginxParser.java	/^		RULE_includeDirective = 4, RULE_serverDirective = 5, RULE_value = 6, RULE_block = 7;$/;"	f	class:NginxParser
+RULE_contextDirective	parser/src/NginxParser.java	/^		RULE_nginx = 0, RULE_stat = 1, RULE_upstreamDirective = 2, RULE_contextDirective = 3, $/;"	f	class:NginxParser
+RULE_includeDirective	parser/src/NginxParser.java	/^		RULE_includeDirective = 4, RULE_serverDirective = 5, RULE_value = 6, RULE_block = 7;$/;"	f	class:NginxParser
+RULE_nginx	parser/src/NginxParser.java	/^		RULE_nginx = 0, RULE_stat = 1, RULE_upstreamDirective = 2, RULE_contextDirective = 3, $/;"	f	class:NginxParser
+RULE_serverDirective	parser/src/NginxParser.java	/^		RULE_includeDirective = 4, RULE_serverDirective = 5, RULE_value = 6, RULE_block = 7;$/;"	f	class:NginxParser
+RULE_stat	parser/src/NginxParser.java	/^		RULE_nginx = 0, RULE_stat = 1, RULE_upstreamDirective = 2, RULE_contextDirective = 3, $/;"	f	class:NginxParser
+RULE_upstreamDirective	parser/src/NginxParser.java	/^		RULE_nginx = 0, RULE_stat = 1, RULE_upstreamDirective = 2, RULE_contextDirective = 3, $/;"	f	class:NginxParser
+RULE_value	parser/src/NginxParser.java	/^		RULE_includeDirective = 4, RULE_serverDirective = 5, RULE_value = 6, RULE_block = 7;$/;"	f	class:NginxParser
+ServerDirectiveContext	parser/src/NginxParser.java	/^		public ServerDirectiveContext(ParserRuleContext parent, int invokingState) {$/;"	m	class:NginxParser.ServerDirectiveContext
+ServerDirectiveContext	parser/src/NginxParser.java	/^	public static class ServerDirectiveContext extends ParserRuleContext {$/;"	c	class:NginxParser
+StatContext	parser/src/NginxParser.java	/^		public StatContext(ParserRuleContext parent, int invokingState) {$/;"	m	class:NginxParser.StatContext
+StatContext	parser/src/NginxParser.java	/^	public static class StatContext extends ParserRuleContext {$/;"	c	class:NginxParser
+T__0	parser/src/NginxLexer.java	/^		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, WS=9, COMMENT=10;$/;"	f	class:NginxLexer
+T__0	parser/src/NginxParser.java	/^		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, WS=9, COMMENT=10;$/;"	f	class:NginxParser
+T__1	parser/src/NginxLexer.java	/^		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, WS=9, COMMENT=10;$/;"	f	class:NginxLexer
+T__1	parser/src/NginxParser.java	/^		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, WS=9, COMMENT=10;$/;"	f	class:NginxParser
+T__2	parser/src/NginxLexer.java	/^		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, WS=9, COMMENT=10;$/;"	f	class:NginxLexer
+T__2	parser/src/NginxParser.java	/^		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, WS=9, COMMENT=10;$/;"	f	class:NginxParser
+T__3	parser/src/NginxLexer.java	/^		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, WS=9, COMMENT=10;$/;"	f	class:NginxLexer
+T__3	parser/src/NginxParser.java	/^		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, WS=9, COMMENT=10;$/;"	f	class:NginxParser
+T__4	parser/src/NginxLexer.java	/^		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, WS=9, COMMENT=10;$/;"	f	class:NginxLexer
+T__4	parser/src/NginxParser.java	/^		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, WS=9, COMMENT=10;$/;"	f	class:NginxParser
+T__5	parser/src/NginxLexer.java	/^		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, WS=9, COMMENT=10;$/;"	f	class:NginxLexer
+T__5	parser/src/NginxParser.java	/^		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, WS=9, COMMENT=10;$/;"	f	class:NginxParser
+T__6	parser/src/NginxLexer.java	/^		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, WS=9, COMMENT=10;$/;"	f	class:NginxLexer
+T__6	parser/src/NginxParser.java	/^		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, WS=9, COMMENT=10;$/;"	f	class:NginxParser
+Upstream	src/Upstream.java	/^    public Upstream(String upstream_name){$/;"	m	class:Upstream
+Upstream	src/Upstream.java	/^public class Upstream{$/;"	c
+UpstreamDirectiveContext	parser/src/NginxParser.java	/^		public UpstreamDirectiveContext(ParserRuleContext parent, int invokingState) {$/;"	m	class:NginxParser.UpstreamDirectiveContext
+UpstreamDirectiveContext	parser/src/NginxParser.java	/^	public static class UpstreamDirectiveContext extends ParserRuleContext {$/;"	c	class:NginxParser
+UpstreamListener	src/UpstreamListener.java	/^    public UpstreamListener(){$/;"	m	class:UpstreamListener
+UpstreamListener	src/UpstreamListener.java	/^class UpstreamListener extends NginxBaseListener {$/;"	c
+VOCABULARY	parser/src/NginxLexer.java	/^	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES)/;"	f	class:NginxLexer
+VOCABULARY	parser/src/NginxParser.java	/^	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES)/;"	f	class:NginxParser
+ValueContext	parser/src/NginxParser.java	/^		public ValueContext(ParserRuleContext parent, int invokingState) {$/;"	m	class:NginxParser.ValueContext
+ValueContext	parser/src/NginxParser.java	/^	public static class ValueContext extends ParserRuleContext {$/;"	c	class:NginxParser
+WS	parser/src/NginxLexer.java	/^		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, WS=9, COMMENT=10;$/;"	f	class:NginxLexer
+WS	parser/src/NginxParser.java	/^		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, ID=8, WS=9, COMMENT=10;$/;"	f	class:NginxParser
+_ATN	parser/src/NginxLexer.java	/^	public static final ATN _ATN =$/;"	f	class:NginxLexer
+_ATN	parser/src/NginxParser.java	/^	public static final ATN _ATN =$/;"	f	class:NginxParser
+_LITERAL_NAMES	parser/src/NginxLexer.java	/^	private static final String[] _LITERAL_NAMES = makeLiteralNames();$/;"	f	class:NginxLexer	file:
+_LITERAL_NAMES	parser/src/NginxParser.java	/^	private static final String[] _LITERAL_NAMES = makeLiteralNames();$/;"	f	class:NginxParser	file:
+_SYMBOLIC_NAMES	parser/src/NginxLexer.java	/^	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();$/;"	f	class:NginxLexer	file:
+_SYMBOLIC_NAMES	parser/src/NginxParser.java	/^	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();$/;"	f	class:NginxParser	file:
+_decisionToDFA	parser/src/NginxLexer.java	/^	protected static final DFA[] _decisionToDFA;$/;"	f	class:NginxLexer
+_decisionToDFA	parser/src/NginxParser.java	/^	protected static final DFA[] _decisionToDFA;$/;"	f	class:NginxParser
+_serializedATN	parser/src/NginxLexer.java	/^	public static final String _serializedATN =$/;"	f	class:NginxLexer
+_serializedATN	parser/src/NginxParser.java	/^	public static final String _serializedATN =$/;"	f	class:NginxParser
+_sharedContextCache	parser/src/NginxLexer.java	/^	protected static final PredictionContextCache _sharedContextCache =$/;"	f	class:NginxLexer
+_sharedContextCache	parser/src/NginxParser.java	/^	protected static final PredictionContextCache _sharedContextCache =$/;"	f	class:NginxParser
+addPath	src/IncludeListener.java	/^	public void addPath(String dir, String path) throws IOException {$/;"	m	class:IncludeListener
+baseDir	src/IncludeListener.java	/^	String baseDir;$/;"	f	class:IncludeListener
+baseDir	src/NginxTopo.java	/^	static String baseDir;$/;"	f	class:NginxTopo
+block	parser/src/NginxParser.java	/^		public BlockContext block() {$/;"	m	class:NginxParser.ContextDirectiveContext
+block	parser/src/NginxParser.java	/^		public BlockContext block() {$/;"	m	class:NginxParser.StatContext
+block	parser/src/NginxParser.java	/^		public BlockContext block() {$/;"	m	class:NginxParser.UpstreamDirectiveContext
+block	parser/src/NginxParser.java	/^	public final BlockContext block() throws RecognitionException {$/;"	m	class:NginxParser
+channelNames	parser/src/NginxLexer.java	/^	public static String[] channelNames = {$/;"	f	class:NginxLexer
+context	parser/src/NginxParser.java	/^		public Token context;$/;"	f	class:NginxParser.ContextDirectiveContext
+contextDirective	parser/src/NginxParser.java	/^		public ContextDirectiveContext contextDirective() {$/;"	m	class:NginxParser.StatContext
+contextDirective	parser/src/NginxParser.java	/^	public final ContextDirectiveContext contextDirective() throws RecognitionException {$/;"	m	class:NginxParser
+enterBlock	parser/src/NginxBaseListener.java	/^	@Override public void enterBlock(NginxParser.BlockContext ctx) { }$/;"	m	class:NginxBaseListener
+enterBlock	parser/src/NginxListener.java	/^	void enterBlock(NginxParser.BlockContext ctx);$/;"	m	interface:NginxListener
+enterContextDirective	parser/src/NginxBaseListener.java	/^	@Override public void enterContextDirective(NginxParser.ContextDirectiveContext ctx) { }$/;"	m	class:NginxBaseListener
+enterContextDirective	parser/src/NginxListener.java	/^	void enterContextDirective(NginxParser.ContextDirectiveContext ctx);$/;"	m	interface:NginxListener
+enterEveryRule	parser/src/NginxBaseListener.java	/^	@Override public void enterEveryRule(ParserRuleContext ctx) { }$/;"	m	class:NginxBaseListener
+enterIncludeDirective	parser/src/NginxBaseListener.java	/^	@Override public void enterIncludeDirective(NginxParser.IncludeDirectiveContext ctx) { }$/;"	m	class:NginxBaseListener
+enterIncludeDirective	parser/src/NginxListener.java	/^	void enterIncludeDirective(NginxParser.IncludeDirectiveContext ctx);$/;"	m	interface:NginxListener
+enterNginx	parser/src/NginxBaseListener.java	/^	@Override public void enterNginx(NginxParser.NginxContext ctx) { }$/;"	m	class:NginxBaseListener
+enterNginx	parser/src/NginxListener.java	/^	void enterNginx(NginxParser.NginxContext ctx);$/;"	m	interface:NginxListener
+enterRule	parser/src/NginxParser.java	/^		public void enterRule(ParseTreeListener listener) {$/;"	m	class:NginxParser.BlockContext
+enterRule	parser/src/NginxParser.java	/^		public void enterRule(ParseTreeListener listener) {$/;"	m	class:NginxParser.ContextDirectiveContext
+enterRule	parser/src/NginxParser.java	/^		public void enterRule(ParseTreeListener listener) {$/;"	m	class:NginxParser.IncludeDirectiveContext
+enterRule	parser/src/NginxParser.java	/^		public void enterRule(ParseTreeListener listener) {$/;"	m	class:NginxParser.NginxContext
+enterRule	parser/src/NginxParser.java	/^		public void enterRule(ParseTreeListener listener) {$/;"	m	class:NginxParser.ServerDirectiveContext
+enterRule	parser/src/NginxParser.java	/^		public void enterRule(ParseTreeListener listener) {$/;"	m	class:NginxParser.StatContext
+enterRule	parser/src/NginxParser.java	/^		public void enterRule(ParseTreeListener listener) {$/;"	m	class:NginxParser.UpstreamDirectiveContext
+enterRule	parser/src/NginxParser.java	/^		public void enterRule(ParseTreeListener listener) {$/;"	m	class:NginxParser.ValueContext
+enterServerDirective	parser/src/NginxBaseListener.java	/^	@Override public void enterServerDirective(NginxParser.ServerDirectiveContext ctx) { }$/;"	m	class:NginxBaseListener
+enterServerDirective	parser/src/NginxListener.java	/^	void enterServerDirective(NginxParser.ServerDirectiveContext ctx);$/;"	m	interface:NginxListener
+enterStat	parser/src/NginxBaseListener.java	/^	@Override public void enterStat(NginxParser.StatContext ctx) { }$/;"	m	class:NginxBaseListener
+enterStat	parser/src/NginxListener.java	/^	void enterStat(NginxParser.StatContext ctx);$/;"	m	interface:NginxListener
+enterUpstreamDirective	parser/src/NginxBaseListener.java	/^	@Override public void enterUpstreamDirective(NginxParser.UpstreamDirectiveContext ctx) { }$/;"	m	class:NginxBaseListener
+enterUpstreamDirective	parser/src/NginxListener.java	/^	void enterUpstreamDirective(NginxParser.UpstreamDirectiveContext ctx);$/;"	m	interface:NginxListener
+enterUpstreamDirective	src/UpstreamListener.java	/^    public void enterUpstreamDirective(NginxParser.UpstreamDirectiveContext ctx) {$/;"	m	class:UpstreamListener
+enterValue	parser/src/NginxBaseListener.java	/^	@Override public void enterValue(NginxParser.ValueContext ctx) { }$/;"	m	class:NginxBaseListener
+enterValue	parser/src/NginxListener.java	/^	void enterValue(NginxParser.ValueContext ctx);$/;"	m	interface:NginxListener
+exitBlock	parser/src/NginxBaseListener.java	/^	@Override public void exitBlock(NginxParser.BlockContext ctx) { }$/;"	m	class:NginxBaseListener
+exitBlock	parser/src/NginxListener.java	/^	void exitBlock(NginxParser.BlockContext ctx);$/;"	m	interface:NginxListener
+exitContextDirective	parser/src/NginxBaseListener.java	/^	@Override public void exitContextDirective(NginxParser.ContextDirectiveContext ctx) { }$/;"	m	class:NginxBaseListener
+exitContextDirective	parser/src/NginxListener.java	/^	void exitContextDirective(NginxParser.ContextDirectiveContext ctx);$/;"	m	interface:NginxListener
+exitEveryRule	parser/src/NginxBaseListener.java	/^	@Override public void exitEveryRule(ParserRuleContext ctx) { }$/;"	m	class:NginxBaseListener
+exitIncludeDirective	parser/src/NginxBaseListener.java	/^	@Override public void exitIncludeDirective(NginxParser.IncludeDirectiveContext ctx) { }$/;"	m	class:NginxBaseListener
+exitIncludeDirective	parser/src/NginxListener.java	/^	void exitIncludeDirective(NginxParser.IncludeDirectiveContext ctx);$/;"	m	interface:NginxListener
+exitIncludeDirective	src/IncludeListener.java	/^	public void exitIncludeDirective(NginxParser.IncludeDirectiveContext ctx) {$/;"	m	class:IncludeListener
+exitNginx	parser/src/NginxBaseListener.java	/^	@Override public void exitNginx(NginxParser.NginxContext ctx) { }$/;"	m	class:NginxBaseListener
+exitNginx	parser/src/NginxListener.java	/^	void exitNginx(NginxParser.NginxContext ctx);$/;"	m	interface:NginxListener
+exitRule	parser/src/NginxParser.java	/^		public void exitRule(ParseTreeListener listener) {$/;"	m	class:NginxParser.BlockContext
+exitRule	parser/src/NginxParser.java	/^		public void exitRule(ParseTreeListener listener) {$/;"	m	class:NginxParser.ContextDirectiveContext
+exitRule	parser/src/NginxParser.java	/^		public void exitRule(ParseTreeListener listener) {$/;"	m	class:NginxParser.IncludeDirectiveContext
+exitRule	parser/src/NginxParser.java	/^		public void exitRule(ParseTreeListener listener) {$/;"	m	class:NginxParser.NginxContext
+exitRule	parser/src/NginxParser.java	/^		public void exitRule(ParseTreeListener listener) {$/;"	m	class:NginxParser.ServerDirectiveContext
+exitRule	parser/src/NginxParser.java	/^		public void exitRule(ParseTreeListener listener) {$/;"	m	class:NginxParser.StatContext
+exitRule	parser/src/NginxParser.java	/^		public void exitRule(ParseTreeListener listener) {$/;"	m	class:NginxParser.UpstreamDirectiveContext
+exitRule	parser/src/NginxParser.java	/^		public void exitRule(ParseTreeListener listener) {$/;"	m	class:NginxParser.ValueContext
+exitServerDirective	parser/src/NginxBaseListener.java	/^	@Override public void exitServerDirective(NginxParser.ServerDirectiveContext ctx) { }$/;"	m	class:NginxBaseListener
+exitServerDirective	parser/src/NginxListener.java	/^	void exitServerDirective(NginxParser.ServerDirectiveContext ctx);$/;"	m	interface:NginxListener
+exitServerDirective	src/UpstreamListener.java	/^    public void exitServerDirective(NginxParser.ServerDirectiveContext ctx) {$/;"	m	class:UpstreamListener
+exitStat	parser/src/NginxBaseListener.java	/^	@Override public void exitStat(NginxParser.StatContext ctx) { }$/;"	m	class:NginxBaseListener
+exitStat	parser/src/NginxListener.java	/^	void exitStat(NginxParser.StatContext ctx);$/;"	m	interface:NginxListener
+exitUpstreamDirective	parser/src/NginxBaseListener.java	/^	@Override public void exitUpstreamDirective(NginxParser.UpstreamDirectiveContext ctx) { }$/;"	m	class:NginxBaseListener
+exitUpstreamDirective	parser/src/NginxListener.java	/^	void exitUpstreamDirective(NginxParser.UpstreamDirectiveContext ctx);$/;"	m	interface:NginxListener
+exitUpstreamDirective	src/UpstreamListener.java	/^    public void exitUpstreamDirective(NginxParser.UpstreamDirectiveContext ctx) {$/;"	m	class:UpstreamListener
+exitValue	parser/src/NginxBaseListener.java	/^	@Override public void exitValue(NginxParser.ValueContext ctx) { }$/;"	m	class:NginxBaseListener
+exitValue	parser/src/NginxListener.java	/^	void exitValue(NginxParser.ValueContext ctx);$/;"	m	interface:NginxListener
+getATN	parser/src/NginxLexer.java	/^	public ATN getATN() { return _ATN; }$/;"	m	class:NginxLexer
+getATN	parser/src/NginxParser.java	/^	public ATN getATN() { return _ATN; }$/;"	m	class:NginxParser
+getChannelNames	parser/src/NginxLexer.java	/^	public String[] getChannelNames() { return channelNames; }$/;"	m	class:NginxLexer
+getGrammarFileName	parser/src/NginxLexer.java	/^	public String getGrammarFileName() { return "Nginx.g4"; }$/;"	m	class:NginxLexer
+getGrammarFileName	parser/src/NginxParser.java	/^	public String getGrammarFileName() { return "Nginx.g4"; }$/;"	m	class:NginxParser
+getModeNames	parser/src/NginxLexer.java	/^	public String[] getModeNames() { return modeNames; }$/;"	m	class:NginxLexer
+getRuleIndex	parser/src/NginxParser.java	/^		@Override public int getRuleIndex() { return RULE_block; }$/;"	m	class:NginxParser.BlockContext
+getRuleIndex	parser/src/NginxParser.java	/^		@Override public int getRuleIndex() { return RULE_contextDirective; }$/;"	m	class:NginxParser.ContextDirectiveContext
+getRuleIndex	parser/src/NginxParser.java	/^		@Override public int getRuleIndex() { return RULE_includeDirective; }$/;"	m	class:NginxParser.IncludeDirectiveContext
+getRuleIndex	parser/src/NginxParser.java	/^		@Override public int getRuleIndex() { return RULE_nginx; }$/;"	m	class:NginxParser.NginxContext
+getRuleIndex	parser/src/NginxParser.java	/^		@Override public int getRuleIndex() { return RULE_serverDirective; }$/;"	m	class:NginxParser.ServerDirectiveContext
+getRuleIndex	parser/src/NginxParser.java	/^		@Override public int getRuleIndex() { return RULE_stat; }$/;"	m	class:NginxParser.StatContext
+getRuleIndex	parser/src/NginxParser.java	/^		@Override public int getRuleIndex() { return RULE_upstreamDirective; }$/;"	m	class:NginxParser.UpstreamDirectiveContext
+getRuleIndex	parser/src/NginxParser.java	/^		@Override public int getRuleIndex() { return RULE_value; }$/;"	m	class:NginxParser.ValueContext
+getRuleNames	parser/src/NginxLexer.java	/^	public String[] getRuleNames() { return ruleNames; }$/;"	m	class:NginxLexer
+getRuleNames	parser/src/NginxParser.java	/^	public String[] getRuleNames() { return ruleNames; }$/;"	m	class:NginxParser
+getSerializedATN	parser/src/NginxLexer.java	/^	public String getSerializedATN() { return _serializedATN; }$/;"	m	class:NginxLexer
+getSerializedATN	parser/src/NginxParser.java	/^	public String getSerializedATN() { return _serializedATN; }$/;"	m	class:NginxParser
+getTokenNames	parser/src/NginxLexer.java	/^	public String[] getTokenNames() {$/;"	m	class:NginxLexer
+getTokenNames	parser/src/NginxParser.java	/^	public String[] getTokenNames() {$/;"	m	class:NginxParser
+getVocabulary	parser/src/NginxLexer.java	/^	public Vocabulary getVocabulary() {$/;"	m	class:NginxLexer
+getVocabulary	parser/src/NginxParser.java	/^	public Vocabulary getVocabulary() {$/;"	m	class:NginxParser
+includeDirective	parser/src/NginxParser.java	/^		public IncludeDirectiveContext includeDirective() {$/;"	m	class:NginxParser.StatContext
+includeDirective	parser/src/NginxParser.java	/^	public final IncludeDirectiveContext includeDirective() throws RecognitionException {$/;"	m	class:NginxParser
+main	src/NginxTopo.java	/^	public static void main(String[] args) throws Exception {$/;"	m	class:NginxTopo
+makeLiteralNames	parser/src/NginxLexer.java	/^	private static String[] makeLiteralNames() {$/;"	m	class:NginxLexer	file:
+makeLiteralNames	parser/src/NginxParser.java	/^	private static String[] makeLiteralNames() {$/;"	m	class:NginxParser	file:
+makeRuleNames	parser/src/NginxLexer.java	/^	private static String[] makeRuleNames() {$/;"	m	class:NginxLexer	file:
+makeRuleNames	parser/src/NginxParser.java	/^	private static String[] makeRuleNames() {$/;"	m	class:NginxParser	file:
+makeSymbolicNames	parser/src/NginxLexer.java	/^	private static String[] makeSymbolicNames() {$/;"	m	class:NginxLexer	file:
+makeSymbolicNames	parser/src/NginxParser.java	/^	private static String[] makeSymbolicNames() {$/;"	m	class:NginxParser	file:
+modeNames	parser/src/NginxLexer.java	/^	public static String[] modeNames = {$/;"	f	class:NginxLexer
+name	src/Upstream.java	/^    String name;$/;"	f	class:Upstream
+nginx	parser/src/NginxParser.java	/^	public final NginxContext nginx() throws RecognitionException {$/;"	m	class:NginxParser
+parseFile	src/NginxTopo.java	/^	public static void parseFile(String inputFile) {$/;"	m	class:NginxTopo
+paths	src/IncludeListener.java	/^	ArrayList<String> paths;$/;"	f	class:IncludeListener
+ruleNames	parser/src/NginxLexer.java	/^	public static final String[] ruleNames = makeRuleNames();$/;"	f	class:NginxLexer
+ruleNames	parser/src/NginxParser.java	/^	public static final String[] ruleNames = makeRuleNames();$/;"	f	class:NginxParser
+serverDirective	parser/src/NginxParser.java	/^		public ServerDirectiveContext serverDirective() {$/;"	m	class:NginxParser.StatContext
+serverDirective	parser/src/NginxParser.java	/^	public final ServerDirectiveContext serverDirective() throws RecognitionException {$/;"	m	class:NginxParser
+servers	src/Upstream.java	/^    ArrayList<String> servers;$/;"	f	class:Upstream
+stat	parser/src/NginxParser.java	/^		public List<StatContext> stat() {$/;"	m	class:NginxParser.BlockContext
+stat	parser/src/NginxParser.java	/^		public List<StatContext> stat() {$/;"	m	class:NginxParser.NginxContext
+stat	parser/src/NginxParser.java	/^		public StatContext stat(int i) {$/;"	m	class:NginxParser.BlockContext
+stat	parser/src/NginxParser.java	/^		public StatContext stat(int i) {$/;"	m	class:NginxParser.NginxContext
+stat	parser/src/NginxParser.java	/^	public final StatContext stat() throws RecognitionException {$/;"	m	class:NginxParser
+tokenNames	parser/src/NginxLexer.java	/^	public static final String[] tokenNames;$/;"	f	class:NginxLexer
+tokenNames	parser/src/NginxParser.java	/^	public static final String[] tokenNames;$/;"	f	class:NginxParser
+upstream	src/UpstreamListener.java	/^    Upstream upstream;$/;"	f	class:UpstreamListener
+upstreamDirective	parser/src/NginxParser.java	/^		public UpstreamDirectiveContext upstreamDirective() {$/;"	m	class:NginxParser.StatContext
+upstreamDirective	parser/src/NginxParser.java	/^	public final UpstreamDirectiveContext upstreamDirective() throws RecognitionException {$/;"	m	class:NginxParser
+upstreams	src/UpstreamListener.java	/^    HashMap<String,Upstream> upstreams;$/;"	f	class:UpstreamListener
+value	parser/src/NginxParser.java	/^		public List<ValueContext> value() {$/;"	m	class:NginxParser.ServerDirectiveContext
+value	parser/src/NginxParser.java	/^		public List<ValueContext> value() {$/;"	m	class:NginxParser.StatContext
+value	parser/src/NginxParser.java	/^		public ValueContext value() {$/;"	m	class:NginxParser.IncludeDirectiveContext
+value	parser/src/NginxParser.java	/^		public ValueContext value(int i) {$/;"	m	class:NginxParser.ServerDirectiveContext
+value	parser/src/NginxParser.java	/^		public ValueContext value(int i) {$/;"	m	class:NginxParser.StatContext
+value	parser/src/NginxParser.java	/^	public final ValueContext value() throws RecognitionException {$/;"	m	class:NginxParser
+visitErrorNode	parser/src/NginxBaseListener.java	/^	@Override public void visitErrorNode(ErrorNode node) { }$/;"	m	class:NginxBaseListener
+visitTerminal	parser/src/NginxBaseListener.java	/^	@Override public void visitTerminal(TerminalNode node) { }$/;"	m	class:NginxBaseListener
