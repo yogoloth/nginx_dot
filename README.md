@@ -1,3 +1,3 @@
 # nginx_dot
 
-draw nginx topo with graphviz
+convert nginx config to graphviz topo
