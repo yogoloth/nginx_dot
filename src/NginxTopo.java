@@ -93,6 +93,7 @@ public class NginxTopo {
 		dotCollector.setListener(new DotListener());
 		System.out.print("digraph ws {\n"
 				+ "nodesep = .5;\n"
+                + "rankdir = LR ;"
 				+ "node[shape=record, width=.1, height=.1];\n"
 				+ "node[color=\"#550000\"];\n"
 				);
