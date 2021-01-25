@@ -29,9 +29,9 @@ public class DotListener extends NginxBaseListener {
 		}else if(currentContext.contains("server")&&ctx.value(0).getText().equals("proxy_pass")) {
 	       String proxy_pass=ctx.value(1).getText().replace("http://", "").replace("https://", "");
 			if (System.getProperty("DEBUG") != null) {
-				System.out.print("found upstreams: "+proxy_pass+NginxTopo.upstreams.get(proxy_pass));
+				System.out.println("found upstreams: "+proxy_pass+NginxTopo.upstreams.get(proxy_pass));
 			}
-			System.out.print(currentUrl+"->"+"upstream_"+proxy_pass+"[label=\"{");
+			System.out.print(currentUrl+"->"+"\"upstream_"+proxy_pass+"\"[label=\"{");
 	       if (NginxTopo.upstreams.get(proxy_pass)!=null) {
 //	        	for (String server : NginxTopo.upstreams.get(proxy_pass).servers) {
 //	        	    System.out.print("upstream:"+server+"|");
@@ -50,12 +50,12 @@ public class DotListener extends NginxBaseListener {
 	}
 	
 	public void exitRegexLocation(NginxParser.RegexLocationContext ctx) {
-       currentUrl=	"url"+ url_count++;
+       currentUrl=	"url_"+ url_count++;
 		System.out.println(currentServer+"->" + currentUrl +"[label=\"{"+ctx.value().getText()+"}\"]");
 	}
 	
 	public void exitNormalLocation(NginxParser.NormalLocationContext ctx) {
-		currentUrl=	"url"+ url_count++;
+		currentUrl=	"url_"+ url_count++;
 		System.out.println(currentServer+ "->" +currentUrl +"[label=\"{"+ctx.value().getText()+"}\"]");
 	}
 	

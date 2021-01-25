@@ -17,4 +17,9 @@ clean:
 tags:
 	ctags -R src/ parser/src/
 
+render:
+	@(cd target ; java  NginxTopo ../sample/nginx.conf >/tmp/test.dot)
+	dot -Tsvg -o /tmp/test.svg /tmp/test.dot
+	eog /tmp/test.svg
+
 .PHONY: clean tags

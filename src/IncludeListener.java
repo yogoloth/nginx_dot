@@ -13,8 +13,10 @@
 //import java.util.Set;
 
 import java.util.ArrayList;
+import java.util.regex.Pattern;
 import java.nio.file.*;
 import java.nio.file.attribute.*;
+import java.io.File;
 import java.io.IOException;
 
 class IncludeListener extends NginxBaseListener {
@@ -30,6 +32,17 @@ class IncludeListener extends NginxBaseListener {
 		String glob ;
 		if(path.startsWith("/")) {
 			glob = "glob:"+path;	
+
+            //Pattern pattern = Pattern.compile("\*.*");
+            //Matcher matcher=pattern.matcher(path);
+            //path=matcher.replaceFirst("");
+              path.replaceFirst("\\*.*", "");
+            File file=new File(path);
+            if(file.isDirectory()){
+                dir=file.getPath().toString();
+            }else{
+            dir=file.getParent().toString();
+            }
 		}else {
      		glob = "glob:"+dir+"/"+path;
 		}
@@ -41,9 +54,9 @@ class IncludeListener extends NginxBaseListener {
 		Files.walkFileTree(Paths.get(dir), new SimpleFileVisitor<Path>() {
 			@Override
 			public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-				// System.out.println(file);
+				//System.out.println(file);
 				if (pathMatcher.matches(file)) {
-					// System.out.println(file);
+					//System.out.println(file);
 					paths.add(file.toString());
 				}
 				return FileVisitResult.CONTINUE;
