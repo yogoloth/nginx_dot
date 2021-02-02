@@ -56,13 +56,13 @@ public class DotListener extends NginxBaseListener {
 		}
 	}
 	
-	public void exitRegexLocation(NginxParser.RegexLocationContext ctx) {
+	public void enterRegexLocation(NginxParser.RegexLocationContext ctx) {
 		currentUrl=uniqLocation(ctx.value().getText());
 		//System.out.println(currentServer+"->" + currentUrl +"[label=\"{"+ctx.value().getText()+"}\"]");
 		System.out.println(currentServer+"->" + currentUrl);
 	}
 	
-	public void exitNormalLocation(NginxParser.NormalLocationContext ctx) {
+	public void enterNormalLocation(NginxParser.NormalLocationContext ctx) {
 		currentUrl=uniqLocation(ctx.value().getText());
 		//System.out.println(currentServer+ "->" +currentUrl +"[label=\"{"+ctx.value().getText()+"}\"]");
 		System.out.println(currentServer+ "->" +currentUrl);
