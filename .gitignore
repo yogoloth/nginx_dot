@@ -1,5 +1,2 @@
-target/*
 *.class
-sample/*
 bin/*
-jar/*
