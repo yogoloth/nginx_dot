@@ -22,4 +22,8 @@ render:
 	dot -Tsvg -o /tmp/test.svg /tmp/test.dot
 	eog /tmp/test.svg
 
-.PHONY: clean tags
+jar: build
+	(cd target ; jar xf ../libs/antlr-4.9-complete.jar)
+	(cd target ; jar cvfm ../jar/nginx_topo.jar ../src/manifest.mf  *)
+
+.PHONY: clean tags jar
