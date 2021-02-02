@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.antlr.v4.runtime.tree.ParseTreeProperty;
 
@@ -7,6 +8,10 @@ public class DotListener extends NginxBaseListener {
 	static String currentContext="global";
 	static int server_count=1;
 	static int url_count=1;
+	static HashMap<String, String> urls=new HashMap<String, String>();
+	static HashMap<String, String> upstreamsInUse=new HashMap<String, String>();
+	
+	
 	String currentServer;
 	String currentUrl;
 	
@@ -28,35 +33,48 @@ public class DotListener extends NginxBaseListener {
 		   System.out.println("}\"]");   
 		}else if(currentContext.contains("server")&&ctx.value(0).getText().equals("proxy_pass")) {
 	       String proxy_pass=ctx.value(1).getText().replace("http://", "").replace("https://", "");
+			upstreamsInUse.put("upstream_"+proxy_pass,proxy_pass);
+			System.out.println(currentUrl+"->"+"\"upstream_"+proxy_pass+"\"");
+		       
 			if (System.getProperty("DEBUG") != null) {
 				System.out.println("found upstreams: "+proxy_pass+NginxTopo.upstreams.get(proxy_pass));
 			}
-			System.out.print(currentUrl+"->"+"\"upstream_"+proxy_pass+"\"[label=\"{");
-	       if (NginxTopo.upstreams.get(proxy_pass)!=null) {
-//	        	for (String server : NginxTopo.upstreams.get(proxy_pass).servers) {
-//	        	    System.out.print("upstream:"+server+"|");
+	       
+//			System.out.print(currentUrl+"->"+"\"upstream_"+proxy_pass+"\"[label=\"");
+//	       if (NginxTopo.upstreams.get(proxy_pass)!=null) {
+//
+//	        	ArrayList<String> servers=NginxTopo.upstreams.get(proxy_pass).servers;
+//	        	for (int i=0;i<servers.size();i++) {
+//	        		System.out.print(servers.get(i));
+//	        		if(i<servers.size()-1) {
+//	        			System.out.print("|");
+//	        		}
 //	        	}
-	        	ArrayList<String> servers=NginxTopo.upstreams.get(proxy_pass).servers;
-	        	for (int i=0;i<servers.size();i++) {
-	        		System.out.print(servers.get(i));
-	        		if(i<servers.size()-1) {
-	        			System.out.print("|");
-	        		}
-	        	}
-	        }
-			System.out.println("}\"]");
+//	        }
+//			System.out.println("\"]");
 			
 		}
 	}
 	
 	public void exitRegexLocation(NginxParser.RegexLocationContext ctx) {
-       currentUrl=	"url_"+ url_count++;
-		System.out.println(currentServer+"->" + currentUrl +"[label=\"{"+ctx.value().getText()+"}\"]");
+		currentUrl=uniqLocation(ctx.value().getText());
+		//System.out.println(currentServer+"->" + currentUrl +"[label=\"{"+ctx.value().getText()+"}\"]");
+		System.out.println(currentServer+"->" + currentUrl);
 	}
 	
 	public void exitNormalLocation(NginxParser.NormalLocationContext ctx) {
-		currentUrl=	"url_"+ url_count++;
-		System.out.println(currentServer+ "->" +currentUrl +"[label=\"{"+ctx.value().getText()+"}\"]");
+		currentUrl=uniqLocation(ctx.value().getText());
+		//System.out.println(currentServer+ "->" +currentUrl +"[label=\"{"+ctx.value().getText()+"}\"]");
+		System.out.println(currentServer+ "->" +currentUrl);
+	}
+
+	private String uniqLocation(String location) {
+		String tmpUrl=urls.get(location);
+		if(tmpUrl==null) {
+		   tmpUrl=	"url_"+ url_count++;
+		   urls.put(location, tmpUrl) ;
+		}
+		return tmpUrl;
 	}
 	
 	

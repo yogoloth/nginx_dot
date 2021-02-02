@@ -7,7 +7,9 @@ import org.stringtemplate.v4.ST;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import java.io.File;
@@ -98,6 +100,29 @@ public class NginxTopo {
 				+ "node[color=\"#550000\"];\n"
 				);
 		parseFile(inputFile,dotCollector);
+		
+		for (Entry<String, String> url : DotListener.urls.entrySet()) {
+			System.out.println(url.getValue()+"[label=\""+url.getKey()+"\"]");
+		}
+		
+		for (Entry<String, String> upstream : DotListener.upstreamsInUse.entrySet()) {
+			String proxy_pass=upstream.getValue();
+			System.out.print("\"upstream_"+proxy_pass+"\"[label=\"");
+			System.out.print(upstream.getKey());
+			if (NginxTopo.upstreams.get(proxy_pass)!=null) {
+				   System.out.print("|");
+		        	ArrayList<String> servers=NginxTopo.upstreams.get(proxy_pass).servers;
+		        	for (int i=0;i<servers.size();i++) {
+		        		System.out.print(servers.get(i));
+		        		if(i<servers.size()-1) {
+		        			System.out.print("|");
+		        		}
+		        	}
+		        }
+			System.out.println("\"]");
+		}
+
+		
 		System.out.print("}\n");
 	}
 
