@@ -1,6 +1,7 @@
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.misc.MultiMap;
 import org.antlr.v4.runtime.misc.OrderedHashSet;
+import org.antlr.v4.runtime.misc.Pair;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import org.stringtemplate.v4.ST;
@@ -9,6 +10,8 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
 
@@ -100,6 +103,19 @@ public class NginxTopo {
 				+ "node[color=\"#550000\"];\n"
 				);
 		parseFile(inputFile,dotCollector);
+		
+		Set<String> uniq_edges=new HashSet<String>();
+		for (Pair<String, String> edge : DotListener.edges.getPairs()) {
+			uniq_edges.add(edge.a+"->"+edge.b);		
+		}
+		
+		for (String edge: uniq_edges) {
+			System.out.println(edge);
+		}
+		
+		for (Entry<String, String> server : DotListener.serversInUse.entrySet()) {
+			System.out.println("http->"+server.getKey());
+		}
 		
 		for (Entry<String, String> url : DotListener.urls.entrySet()) {
 			System.out.println(url.getValue()+"[label=\""+url.getKey()+"\"]");

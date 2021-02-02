@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
+import org.antlr.v4.runtime.misc.MultiMap;
 import org.antlr.v4.runtime.tree.ParseTreeProperty;
 
 public class DotListener extends NginxBaseListener {
@@ -10,6 +12,8 @@ public class DotListener extends NginxBaseListener {
 	static int url_count=1;
 	static HashMap<String, String> urls=new HashMap<String, String>();
 	static HashMap<String, String> upstreamsInUse=new HashMap<String, String>();
+	static HashMap<String, String> serversInUse=new HashMap<String, String>();
+	static MultiMap<String, String> edges=new MultiMap<String, String>();
 	
 	
 	String currentServer;
@@ -24,18 +28,23 @@ public class DotListener extends NginxBaseListener {
 		if(currentContext.equals("server")&&ctx.value(0).getText().equals("server_name")) {	
 			currentServer="site_"+ server_count++;
 			System.out.print(	currentServer +"[label=\"{");
+			
+			StringBuilder servers_str=new StringBuilder();
 			for (int i = 1; i < ctx.value().size(); i++) {
-				System.out.print(ctx.value(i).getText());	
+				servers_str.append(ctx.value(i).getText());
 				if(i<ctx.value().size()-1) {
-					System.out.print("|");
+					servers_str.append("|");
 				}
+				System.out.print(servers_str);	
             }
 		   System.out.println("}\"]");   
+		   serversInUse.put(currentServer,servers_str.toString());
 		}else if(currentContext.contains("server")&&ctx.value(0).getText().equals("proxy_pass")) {
 	       String proxy_pass=ctx.value(1).getText().replace("http://", "").replace("https://", "");
 			upstreamsInUse.put("upstream_"+proxy_pass,proxy_pass);
-			System.out.println(currentUrl+"->"+"\"upstream_"+proxy_pass+"\"");
-		       
+			//System.out.println(currentUrl+"->"+"\"upstream_"+proxy_pass+"\"");
+		    edges.map(currentUrl, "\"upstream_"+proxy_pass+"\"");  
+			
 			if (System.getProperty("DEBUG") != null) {
 				System.out.println("found upstreams: "+proxy_pass+NginxTopo.upstreams.get(proxy_pass));
 			}
@@ -58,14 +67,14 @@ public class DotListener extends NginxBaseListener {
 	
 	public void enterRegexLocation(NginxParser.RegexLocationContext ctx) {
 		currentUrl=uniqLocation(ctx.value().getText());
-		//System.out.println(currentServer+"->" + currentUrl +"[label=\"{"+ctx.value().getText()+"}\"]");
-		System.out.println(currentServer+"->" + currentUrl);
+		//System.out.println(currentServer+"->" + currentUrl);
+		edges.map(currentServer, currentUrl);
 	}
 	
 	public void enterNormalLocation(NginxParser.NormalLocationContext ctx) {
 		currentUrl=uniqLocation(ctx.value().getText());
-		//System.out.println(currentServer+ "->" +currentUrl +"[label=\"{"+ctx.value().getText()+"}\"]");
-		System.out.println(currentServer+ "->" +currentUrl);
+		//System.out.println(currentServer+ "->" +currentUrl);
+		edges.map(currentServer, currentUrl);
 	}
 
 	private String uniqLocation(String location) {
