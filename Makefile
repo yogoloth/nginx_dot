@@ -5,7 +5,7 @@ build: target/NginxTopo.class
 
 target/NginxTopo.class: parser/src/NginxParser.java parser/src/NginxLexer.java src/*.java
 	mkdir -p target jar sample
-	javac -d target parser/src/*.java
+	javac -d target -cp $(CLASSPATH) parser/src/*.java
 	javac  -cp $(CLASSPATH) -d target src/*.java 
 
 parser/src/NginxParser.java parser/src/NginxLexer.java: src/Nginx.g4
